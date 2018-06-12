@@ -63,7 +63,6 @@ difference(){
             translate([0,0,fill_height/2]){
                 cube([x_fill_length,x_fill_width,fill_height],center=true);
             }
-            
         }
     }
     // removing the studs within a certain diameter
@@ -80,14 +79,11 @@ difference(){
 //    cylinder(3,outer,outer);
 //    cylinder(3,inner,inner);
 //}
-// place this on top of our hex bars
+
+// place this on top of our drone arms
 f="Comic Sans MS:style=Bold";
 // f="Latin Modern Sans Demo Cond:style=Bold";
 //f="Latin Modern Sans Quotation:style=Bold";
-//f="Metal:style=Bold";
-//f="TeX Gyre Chorus:style=Bold";
-//f="URW Chancery L:style=Bold";
-//f="URW Gothec L:style=Bold";
 
 s=4;
 translate([0,0,3]){
