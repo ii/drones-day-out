@@ -66,7 +66,6 @@ difference(){
             translate([0,0,fill_height/2]){
                 cube([x_fill_length,x_fill_width,fill_height],center=true);
             }
-            
         }
         translate([-x_fill_length/2+12,0,0])
         rotate([0,0,90]) // front left / rear right
@@ -82,32 +81,17 @@ difference(){
             translate([0,0,fill_height/2]){
                 cube([x_fill_length,x_fill_width,fill_height],center=true);
             }
-            
         }
     }
     // removing the studs within a certain diameter
-    
     translate([0,0,3.2]){
         clear = (arm_length-arm_studs+2.5)*8;
         cylinder(5,clear,clear);
     }
 }
 
-// ring
-//difference () {
-//    outer=116;
-//    inner=111;
-//    cylinder(3,outer,outer);
-//    cylinder(3,inner,inner);
-//}
-// place this on top of our hex bars
+// place this on top of our drone arms
 f="Comic Sans MS:style=Bold";
-// f="Latin Modern Sans Demo Cond:style=Bold";
-//f="Latin Modern Sans Quotation:style=Bold";
-//f="Metal:style=Bold";
-//f="TeX Gyre Chorus:style=Bold";
-//f="URW Chancery L:style=Bold";
-//f="URW Gothec L:style=Bold";
 
 s=4;
 translate([0,0,3]){
@@ -120,21 +104,5 @@ translate([0,0,3]){
         text("conrad",valign="center",halign="center",size=s,font=f);
         translate([45,-6,0])
         text("ruben",valign="center",halign="center",size=s,font=f);
-//        rotate([0,0,60]){
-//        translate([-45,0,0])
-//        text("June",valign="center",halign="center",size=s,font=f);
-//        translate([45,0,0])
-//        text("Hacker",valign="center",halign="center",size=s,font=f);
-//        }
-//        rotate([0,0,-60]){
-//        translate([-45,0,0])
-//        text("Hippie",valign="center",halign="center",size=s,font=f);
-//        translate([45,0,0])
-//        text("2018",valign="center",halign="center",size=s,font=f);
-//        }
     }
 }
-//rotate([0,0,60])
-//rotate([0,0,120])
-//rotate([0,0,180])
-//}
