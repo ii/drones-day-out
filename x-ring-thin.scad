@@ -5,7 +5,7 @@ use <LEGO.scad>;
 arm_length = 4; // studs counting from the controller plate
 arm_studs = 3; // studs keep have at end of arm
 x_length = 2 * arm_length + 5; // including the 5 of the controller plate
-x_width = 3 ;
+x_width = 3;
 
 // we 'fill' in the bottom of the bricks
 fill_height = 2.2 ; // we seem to need 2.2mm
@@ -100,13 +100,13 @@ s=4;
 translate([0,0,3]){
     linear_extrude(height=1.5){
         translate([0,-35,0])
-        text("Back",valign="center",halign="center",size=s,font=f);
+        text("B",valign="center",halign="center",size=s,font=f);
         translate([0,35,0])
-        text("Front",valign="center",halign="center",size=s,font=f);
+        text("F",valign="center",halign="center",size=s,font=f);
         translate([-35,0,0])
-        text("Left",valign="center",halign="center",size=s,font=f);
+        text("L",valign="center",halign="center",size=s,font=f);
         translate([35,0,0])
-        text("Right",valign="center",halign="center",size=s,font=f);
+        text("R",valign="center",halign="center",size=s,font=f);
     }
 }
 } //union
