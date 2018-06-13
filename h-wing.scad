@@ -1,7 +1,5 @@
 use <LEGO.scad>;
 
-// seems my printer can only handle 33 studs (264mm) in an x
-// may have to print separate parts to get bigger than this
 arm_length = 10; // studs counting from the controller plate
 arm_studs = 4; // studs keep have at end of arm
 x_length = 2 * arm_length + 5; // including the 5 of the controller plate
@@ -18,8 +16,7 @@ plate = 1/3; // Plate height ratio
 stud_type = "hollow"; // Prints better
 stud_rescale = 1.05; // fits better on our Prusa printer
 
-// 5x5 Controller Plate
-block(
+block( // 5x5 Controller Plate
     width=5,
     length=5,
     height=plate,
@@ -27,8 +24,7 @@ block(
     stud_rescale=stud_rescale
 );
 
-// Easier to print a flat bottom
-// We do this by placing a cube same size
+// Easier to print a flat bottom by placing a cube same size
 // as the controller directly on the 'floor'
 translate([0,0,fill_height/2]){
     cube(size=[controller_fill,controller_fill, fill_height], center=true);
